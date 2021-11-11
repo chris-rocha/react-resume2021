@@ -1,10 +1,12 @@
 import React, { Component } from "react"
+// import { CSSTransition } from 'react-transition-group'
 import axios from "axios";
-
 export default class Code extends Component {
+
     state = {
         code: [],
-        loading: true
+        loading: true,
+        order: ['explore-branson', 'discover-puerto-rico', 'visit-savannah', 'bermuda', 'ecotours']
     }
     componentDidMount() {
         axios.get(`https://z2t4tas4ok.execute-api.us-east-2.amazonaws.com/prod/code-examples`)
@@ -15,13 +17,22 @@ export default class Code extends Component {
           })
     }
     render() {
+
         if (this.state.loading === true) {
             return (<div className="loading"><span className="material-icons">autorenew</span></div>)
         } else {
             return (
-                <div className="inset">
+                <div className="inset animate">
                     <ul className="two">
-                        { this.state.code.map(code =>
+                        { this.state.code
+                        .sort((a, b) => {
+                            if (this.state.order.indexOf(a.slug) > this.state.order.indexOf(b.slug)) {
+                                return 1;
+                            } else {
+                                return -1;
+                            }
+                        })
+                        .map(code =>
                             <li key={ code.slug }>
                                 <a href={ code.link } target="_blank" rel="noreferrer">
                                     <img loading="lazy" src={ code.thumb } width="300" height="240" className="scale-with-grid" alt="" />
