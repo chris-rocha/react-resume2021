@@ -1,20 +1,20 @@
 import React, { Component } from "react"
 
-export class About extends Component {
+export default class About extends Component {
     render() {
         return(
-            <div class="inset">
-                <div class="bio-header">
+            <div className="inset">
+                <div className="bio-header">
                 <div>
-                        <div class="cover">
+                        <div className="cover">
                             <picture>
-                                    <source srcset="/images/chris.webp" type="image/webp" />
-                                    <img loading="lazy" height="100" width="100" src="/images/chris.jpg" alt="Chris Rocha" title="Chris Rocha" class="pic scale-with-grid" />
+                                    <source srcSet="/images/chris.webp" type="image/webp" />
+                                    <img loading="lazy" height="100" width="100" src="/images/chris.jpg" alt="Chris Rocha" title="Chris Rocha" className="pic scale-with-grid" />
                             </picture>
                             <h5>Contact</h5>
-                            <p class="remove-bottom"><a href="tel:813-545-1429"><span class="material-icons">phone_iphone</span>
+                            <p className="remove-bottom"><a href="tel:813-545-1429"><span className="material-icons">phone_iphone</span>
                             813-545-1429</a></p>
-                            <p><a class="email" href="mailto:chris@chrisrocha.com"><span class="material-icons">email</span> chris@chrisrocha.com</a></p>
+                            <p><a className="email" href="mailto:chris@chrisrocha.com"><span className="material-icons">email</span> chris@chrisrocha.com</a></p>
                         </div>
                 </div>
 
@@ -22,14 +22,14 @@ export class About extends Component {
                 <p>I am a Tampa native and a graduate of the University of South Florida with a B.A. in Fine Art. It may sound strange but I'm a fine art graduate turned computer programmer. This combination makes me a valuable contributor on any project where creative and technology meet. I have extensive experience in print production, graphic design, web design and development. My background includes both corporate advertising departments and agency environments providing me a unique perspective on client needs and expectations.</p>
                 </div>
                 </div>
-                <div class="flex-row smaller add-top">
-                        <div class="cell">
+                <div className="flex-row smaller add-top">
+                        <div className="cell">
                             <h2>Education</h2>
                             <p>B.A Fine Art<br />
                             University of South Florida</p>
                         </div>
 
-                        <div class="cell">
+                        <div className="cell">
                             <h2>Skills</h2>
                             <ul>
                             <li>HTML, CSS, XML and JSON</li>
@@ -39,7 +39,7 @@ export class About extends Component {
                             </ul>
                         </div>
 
-                        <div class="cell">
+                        <div className="cell">
                             <h2>Software</h2>
                             <ul>
                             <li>Adobe Creative Cloud</li>
@@ -53,5 +53,3 @@ export class About extends Component {
         )
     }
 }
-
-export default About;
