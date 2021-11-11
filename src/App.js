@@ -10,14 +10,22 @@ import NotFound from './pages/NotFound';
 const date = new Date();
 const year = date.getFullYear();
 
+const routes = [
+    { path: '/', name: 'About', Component: About },
+    { path: '/code', name: 'Code', Component: Code },
+    { path: '/design', name: 'Design', Component: Design },
+    { path: '*', name: 'NotFound', Component: NotFound },
+  ]
+
+
 export default class App extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentYear: year
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         currentYear: year
+    //     }
+    // }
 
     render() {
         return (
@@ -33,10 +41,9 @@ export default class App extends Component {
                 <main id="content" role="main" className="landing-max-width">
                     <div className="container">
                         <Routes>
-                            <Route path="/" element={ <About /> } />
-                            <Route path="/code" element={ <Code /> } />
-                            <Route path="/design" element={ <Design /> } />
-                            <Route path="*" element={ <NotFound /> } />
+                            {routes.map(({ path, Component }) => (
+                                <Route key={path} path={path} element={ <Component /> } />
+                            ))}
                         </Routes>
                     </div>
                 </main>
@@ -45,7 +52,7 @@ export default class App extends Component {
                     <div className="container">
                         <hr />
                         <Navbar className="footer-menu" />
-                        <p className="legal">© { this.state.currentYear } chrisrocha.com</p>
+                        <p className="legal">© { year } chrisrocha.com</p>
                     </div>
                 </footer>
             </div>
