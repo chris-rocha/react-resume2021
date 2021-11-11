@@ -15,7 +15,7 @@ const routes = [
     { path: '/code', name: 'Code', Component: Code },
     { path: '/design', name: 'Design', Component: Design },
     { path: '*', name: 'NotFound', Component: NotFound },
-  ]
+]
 
 
 export default class App extends Component {
@@ -34,7 +34,7 @@ export default class App extends Component {
                 <header id="header" className="landing-max-width">
                     <div className="container">
                         <h1>Chris Rocha</h1>
-                        <Navbar className="menu" />
+                        <Navbar routes={routes} className="menu" />
                     </div>
                 </header>
 
@@ -51,7 +51,7 @@ export default class App extends Component {
                 <footer id="footer" className="landing-max-width">
                     <div className="container">
                         <hr />
-                        <Navbar className="footer-menu" />
+                        <Navbar routes={routes} className="footer-menu" />
                         <p className="legal">© { year } chrisrocha.com</p>
                     </div>
                 </footer>
