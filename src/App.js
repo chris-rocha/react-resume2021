@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Code from './pages/Code';
 import Design from './pages/Design';
+import NotFound from './pages/NotFound';
 
 const date = new Date();
 const year = date.getFullYear();
@@ -35,6 +36,7 @@ export default class App extends Component {
                             <Route path="/" element={ <About /> } />
                             <Route path="/code" element={ <Code /> } />
                             <Route path="/design" element={ <Design /> } />
+                            <Route path="*" element={ <NotFound /> } />
                         </Routes>
                     </div>
                 </main>
