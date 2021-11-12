@@ -31,8 +31,8 @@ export default class Code extends Component {
                                 return -1;
                             }
                         })
-                        .map(code =>
-                            <li key={ code.slug }>
+                        .map((code, index) =>
+                            <li className="animate__animated animate__faster animate__zoomIn" style={{"animationDelay":`${index*100}ms`}} key={ code.slug }>
                                 <a href={ code.link } target="_blank" rel="noreferrer">
                                     <img loading="lazy" src={ code.thumb } width="300" height="240" className="scale-with-grid" alt="" />
                                     <div className="caption">

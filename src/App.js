@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './scss/style.scss';
+import 'animate.css';
 import Layout from './components/Layout';
 import About from './pages/About';
 import Code from './pages/Code';
