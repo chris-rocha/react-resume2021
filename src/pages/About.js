@@ -3,7 +3,7 @@ import React, { Component } from "react"
 export default class About extends Component {
     render() {
         return(
-            <div className="inset">
+            <div className="inset animate__animated animate__fadeIn">
                 <div className="bio-header">
                 <div>
                         <div className="cover">
