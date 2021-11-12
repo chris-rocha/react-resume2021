@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-// import { CSSTransition } from 'react-transition-group'
 import axios from "axios";
 export default class Code extends Component {
 
@@ -19,10 +18,10 @@ export default class Code extends Component {
     render() {
 
         if (this.state.loading === true) {
-            return (<div className="loading"><span className="material-icons">autorenew</span></div>)
+            return (<div className="inset loading"><span className="material-icons">autorenew</span></div>)
         } else {
             return (
-                <div className="inset animate">
+                <div className="inset">
                     <ul className="two">
                         { this.state.code
                         .sort((a, b) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './scss/style.scss';
 import Navbar from './components/Navbar';
 import About from './pages/About';
@@ -19,34 +19,32 @@ export default class App extends Component {
 
     render() {
         return (
-            <Router>
-                <div className="app-wrap" id="app">
-                    <header id="header" className="landing-max-width">
-                        <div className="container">
-                            <h1>Chris Rocha</h1>
-                            <Navbar routes={routes} className="menu" />
-                        </div>
-                    </header>
+            <div className="app-wrap" id="app">
+                <header id="header" className="landing-max-width">
+                    <div className="container">
+                        <h1>Chris Rocha</h1>
+                        <Navbar routes={routes} className="menu" />
+                    </div>
+                </header>
 
-                    <main id="content" role="main" className="landing-max-width">
-                        <div className="container">
-                            <Routes>
-                                {routes.map(({ path, Component }) => (
-                                    <Route key={path} path={path} element={ <Component /> } />
-                                ))}
-                            </Routes>
-                        </div>
-                    </main>
+                <main id="content" role="main" className="landing-max-width">
+                    <div className="container">
+                        <Routes>
+                            {routes.map(({ path, Component }) => (
+                                <Route key={path} path={path} element={ <Component /> } />
+                            ))}
+                        </Routes>
+                    </div>
+                </main>
 
-                    <footer id="footer" className="landing-max-width">
-                        <div className="container">
-                            <hr />
-                            <Navbar routes={routes} className="footer-menu" />
-                            <p className="legal">© { year } chrisrocha.com</p>
-                        </div>
-                    </footer>
-                </div>
-            </Router>
+                <footer id="footer" className="landing-max-width">
+                    <div className="container">
+                        <hr />
+                        <Navbar routes={routes} className="footer-menu" />
+                        <p className="legal">© { year } chrisrocha.com</p>
+                    </div>
+                </footer>
+            </div>
         );
     }
 
