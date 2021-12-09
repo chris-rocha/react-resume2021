@@ -29,7 +29,7 @@ export default class Design extends Component {
                             <li key={design.id} className="animate__animated animate__faster animate__zoomIn" style={{"animationDelay":`${design.id*20}ms`}}>
                                 <img loading="lazy" width="174" height="140" className="scale-with-grid" src={ design.file } alt={ design.type } />
                                 <div className="caption">
-                                <h4>{ design.type }</h4>
+                                <h2 className="heading4">{ design.type }</h2>
                                 </div>
                             </li>
                         )}

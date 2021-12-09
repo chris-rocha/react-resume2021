@@ -11,10 +11,10 @@ export default class About extends Component {
                                     <source srcSet="/images/chris.webp" type="image/webp" />
                                     <img loading="lazy" height="100" width="100" src="/images/chris.jpg" alt="Chris Rocha" title="Chris Rocha" className="pic scale-with-grid" />
                             </picture>
-                            <h5>Contact</h5>
-                            <p className="remove-bottom"><a href="tel:813-545-1429"><span className="material-icons">phone_iphone</span>
+                            <h2 className="heading5">Contact</h2>
+                            <p className="remove-bottom"><a className="contact" href="tel:813-545-1429"><span className="material-icons">phone_iphone</span>
                             813-545-1429</a></p>
-                            <p><a className="email" href="mailto:chris@chrisrocha.com"><span className="material-icons">email</span> chris@chrisrocha.com</a></p>
+                            <p><a className="contact email" href="mailto:chris@chrisrocha.com"><span className="material-icons">email</span> chris@chrisrocha.com</a></p>
                         </div>
                 </div>
 

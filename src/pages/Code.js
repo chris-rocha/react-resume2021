@@ -36,7 +36,7 @@ export default class Code extends Component {
                                 <a href={ code.link } target="_blank" rel="noreferrer">
                                     <img loading="lazy" src={ code.thumb } width="300" height="240" className="scale-with-grid" alt="" />
                                     <div className="caption">
-                                        <h4>{ code.title }</h4>
+                                        <h2 className="heading4">{ code.title }</h2>
                                         <div className="details">{ code.details }</div>
                                     </div>
                                 </a>

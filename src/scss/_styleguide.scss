@@ -101,7 +101,7 @@
         }
       }
     }
-    h4 {
+    .heading4 {
       font: {
         size: 16px;
         weight: normal;
@@ -161,12 +161,12 @@
       margin-bottom: 10px;
     }
     > div:first-of-type {
-      height: 80vh;
+      height: 30vh;
       position: relative;
       &:after {
         content: "";
         position: absolute;
-        height: 80vh;
+        height: 30vh;
         width: 1px;
         left: 50%;
         bottom: 0;
@@ -270,5 +270,13 @@
     }
     to {
         transform:rotate(360deg);
+    }
+}
+
+a.contact {
+    padding: 8px 0 2px;
+    display: inline-block;
+    span {
+        vertical-align: -6px;
     }
 }

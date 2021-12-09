@@ -5,6 +5,7 @@ $warning: "red";
 $red: #8c1919;
 $buff: #fcf7e6;
 $brown: #301e05;
+$green: #003e3e;
 
 $borderWidth: 1px;
 $formBorderWidth: 0.5px;
@@ -21,14 +22,14 @@ $fontSize: 18px; // default font size. Change here will adjust sizes across the 
 $fontFamily: 'Noto Sans HK', sans-serif; //'Georgia', serif; // default fonts
 $fontColor: $brown; //#333; // default font color
 // $boldFamily: $fontFamily;
-$fontWeight: normal;
+$fontWeight: 400;
 $boldWeight: 900;
 
 $iconFamily: 'Font Awesome 5 Free', 'Fontawesome';
 
 // link vars
 $linkColor: $red; // default link INERT color
-$linkHoverColor: tint($red, 50%); // default link HOVER color
+$linkHoverColor: $green;//tint($red, 50%); // default link HOVER color
 $linkDecoration: none; // default link decoration
 
 // heading vars
