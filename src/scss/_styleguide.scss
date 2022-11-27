@@ -160,28 +160,8 @@
       filter: sepia(50%) saturate(50%);
       margin-bottom: 10px;
     }
-    > div:first-of-type {
-      height: 30vh;
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        height: 30vh;
-        width: 1px;
-        left: 50%;
-        bottom: 0;
-        border-left: 1px dotted $fontColor;
-      }
-    }
     > div:last-of-type {
-      border-top: 1px dotted $fontColor;
       padding-top: $fontSize;
-    }
-    .cover {
-      position: relative;
-      z-index: 1;
-      background-color: $buff;
-      padding-bottom: $fontSize;
     }
   }
   @media (min-width: 760px) {
@@ -189,7 +169,6 @@
       flex-flow: row;
       > div {
         &:first-of-type {
-          height: auto;
           flex: 1 0 auto;
           &:after {
             content: none;

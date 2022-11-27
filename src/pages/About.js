@@ -6,7 +6,7 @@ export default class About extends Component {
             <div className="inset animate__animated animate__fadeIn">
                 <div className="bio-header">
                 <div>
-                        <div className="cover">
+                        <div>
                             <picture>
                                     <source srcSet="/images/chris.webp" type="image/webp" />
                                     <img loading="lazy" height="100" width="100" src="/images/chris.jpg" alt="Chris Rocha" title="Chris Rocha" className="pic scale-with-grid" />
