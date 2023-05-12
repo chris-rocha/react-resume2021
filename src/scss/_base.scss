@@ -154,7 +154,7 @@ small,
 .small-text {
   font-size: 12px;
   line-height: 1.25;
-  margin-bottom: $fontSize / 2;
+  margin-bottom: calc($fontSize / 2);
   small {
     margin-top:0.5em;
     font-size:85%;
